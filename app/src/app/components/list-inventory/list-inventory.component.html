@@ -1,0 +1,28 @@
+<H1>DB Inventory</H1>
+
+<div class="container">
+  <table class="table">
+    <caption>DB Inventory</caption>
+    <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Description</th>
+      <th>DB Type</th>
+      <th>DB Name</th>
+      <th>Hostname</th>
+      <th>Port</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let inventory of inventories">
+      <td>{{inventory.projectId}}</td>
+      <td>{{inventory.description}}</td>
+      <td>{{inventory.dbType | uppercase}} </td>
+      <td>{{inventory.dbName}}</td>
+      <td>{{inventory.hostName}}</td>
+      <td>{{inventory.port}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
