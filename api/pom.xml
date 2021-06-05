@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.management</groupId>
-	<artifactId>inventory</artifactId>
+	<artifactId>inventoryRequest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>inventory management</name>
+	<name>inventoryRequest management</name>
 	<description>Inventory Management System</description>
 	<properties>
 		<java.version>16</java.version>

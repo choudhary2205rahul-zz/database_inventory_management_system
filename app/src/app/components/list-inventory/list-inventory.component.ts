@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Inventory} from "../../model/inventory";
+import {InventoryApiService} from "../../service/data/inventory-api.service";
 
 @Component({
   selector: 'app-list-inventory',
@@ -7,15 +8,20 @@ import {Inventory} from "../../model/inventory";
   styleUrls: ['./list-inventory.component.css']
 })
 export class ListInventoryComponent implements OnInit {
-  inventories = [
-    new Inventory(1, 'Airtel Project', 'Oracle', 'airtel', 'air2120', 1521),
-    new Inventory(2, 'Vodafone Project', 'MySQL', 'vodafone', 'voda3212', 3306)
-  ]
+  inventories: Inventory[] = [];
+  message: string = '';
 
-  constructor() {
+  constructor(private inventoryService: InventoryApiService) {
   }
 
   ngOnInit(): void {
+    this.inventoryService.getAllInventory().subscribe(response => {
+      this.inventories = response;
+    }, error => {
+        this.message = error.error.message;
+      }
+
+    )
   }
 
 }

@@ -8,7 +8,7 @@ export class AuthenticationService {
   constructor() { }
 
   authenticate(username: any,password: any) {
-    if (username === 'rahul' && password === 'dummy') {
+    if (username === 'Rahul' && password === 'dummy') {
       sessionStorage.setItem('authenticated-user', username);
       return true;
     } else {
@@ -23,5 +23,11 @@ export class AuthenticationService {
 
   logout() {
     sessionStorage.removeItem('authenticated-user');
+  }
+
+  getUsername(): string {
+    let user = sessionStorage.getItem('authenticated-user');
+    if (user) { return user };
+    return '';
   }
 }

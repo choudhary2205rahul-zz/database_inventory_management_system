@@ -5,7 +5,7 @@ import {LoginComponent} from "./components/login/login.component";
 import {ErrorComponent} from "./components/error/error.component";
 import {ListInventoryComponent} from "./components/list-inventory/list-inventory.component";
 import {LogoutComponent} from "./components/logout/logout.component";
-import {RouteGuardService} from "./service/route-guard.service";
+import {RouteGuardService} from "./service/authentication/route-guard.service";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
