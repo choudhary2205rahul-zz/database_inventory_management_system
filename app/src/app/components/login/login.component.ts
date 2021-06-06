@@ -20,13 +20,15 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin() {
-    if (this.authService.authenticate(this.username, this.password)) {
-      this.invalidLogin = false;
+
+    this.authService.authenticate(this.username, this.password).subscribe(response => {
 
       // Route to Home Screen on Successful Login
       this.router.navigate(['/home', this.username]);
-    } else {
+
+      this.invalidLogin = false;
+    }, error => {
       this.invalidLogin = true;
-    }
+    })
   }
 }

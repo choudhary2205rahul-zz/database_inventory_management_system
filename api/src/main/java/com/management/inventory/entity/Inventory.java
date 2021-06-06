@@ -14,24 +14,27 @@ public class Inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "project_id")
-    private int projectId;
-
-    @Column(name = "project_description")
-    private String description;
+    private int id;
 
     @Column(name = "db_type")
     private String dbType;
 
-    @Column(name = "db_name")
+    @Column(name= "db_name")
     private String dbName;
 
-    @Column(name = "host_name")
-    private String hostName;
+    @Column(name= "db_host")
+    private String hostname;
 
-    @Column(name = "port")
+    @Column(name= "db_port")
     private int port;
 
-    @Column(name = "password")
+    @Column(name= "db_username")
+    private String username;
+
+    @Column(name= "db_password")
     private String password;
+
+    @OneToOne(mappedBy = "inventory")
+    private Project project;
+
 }

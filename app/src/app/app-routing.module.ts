@@ -6,12 +6,14 @@ import {ErrorComponent} from "./components/error/error.component";
 import {ListInventoryComponent} from "./components/list-inventory/list-inventory.component";
 import {LogoutComponent} from "./components/logout/logout.component";
 import {RouteGuardService} from "./service/authentication/route-guard.service";
+import {InventoryComponent} from "./components/inventory/inventory.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'home/:name', component: HomeComponent, canActivate: [RouteGuardService]},
   {path: 'list-inventory', component: ListInventoryComponent, canActivate: [RouteGuardService]},
+  {path: 'inventory/:id', component: InventoryComponent, canActivate: [RouteGuardService]},
   {path: 'logout', component: LogoutComponent},
   {path: '**', component: ErrorComponent},
 ];

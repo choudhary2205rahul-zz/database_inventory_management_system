@@ -1,11 +1,11 @@
 export class Inventory {
   constructor(
-    public projectId: number,
-    public description: string,
+    public id: number,
     public dbType: string,
     public dbName: string,
-    public hostName: string,
-    public port: number,
+    public hostname: string,
+    public port: any,
+    public username: string,
     public password: string
   ) {}
 }

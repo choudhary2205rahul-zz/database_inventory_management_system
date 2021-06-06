@@ -9,10 +9,11 @@ import lombok.*;
 @Builder
 public class InventoryResponse {
 
-    private int projectId;
-    private String description;
+    private int id;
     private String dbType;
     private String dbName;
-    private String hostName;
+    private String hostname;
     private int port;
+    private String username;
+    private String password;
 }

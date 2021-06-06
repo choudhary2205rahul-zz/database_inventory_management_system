@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {HomeApiService} from "../../service/data/home-api/home-api.service";
+import {AdminService} from "../../service/admin/admin.service";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   name = '';
   message = '';
 
-  constructor(private route: ActivatedRoute, private homeService: HomeApiService) {
+  constructor(private route: ActivatedRoute, private homeService: HomeApiService, private router: Router, public adminService: AdminService) {
   }
 
   ngOnInit(): void {
@@ -28,5 +29,17 @@ export class HomeComponent implements OnInit {
       this.message = error.error.message;
       }
     );
+  }
+
+  navigateToUsers() {
+
+  }
+
+  navigateToDB() {
+    this.router.navigate(['list-inventory']);
+  }
+
+  isAdmin() {
+
   }
 }

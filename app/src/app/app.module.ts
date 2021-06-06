@@ -11,7 +11,9 @@ import {ListInventoryComponent} from './components/list-inventory/list-inventory
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {LogoutComponent} from './components/logout/logout.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { InventoryComponent } from './components/inventory/inventory.component';
+import {HttpInterceptorService} from "./service/authentication/http-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     FooterComponent,
     LogoutComponent,
+    InventoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

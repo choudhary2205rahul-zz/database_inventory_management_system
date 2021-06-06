@@ -1,0 +1,57 @@
+### ADD NEW INVENTORY
+POST http://localhost:8080/inventory-management/inventory
+Content-Type: application/json
+
+{
+  "description": "BSNL Project",
+  "inventory": {
+    "dbType": "MongoDB",
+    "dbName": "bsnl_db",
+    "hostname": "bsnl9634",
+    "port": 27017,
+    "username": "bsnlmong",
+    "password": "qwqw"
+  }
+}
+
+### Update INVENTORY
+POST http://localhost:8080/inventory-management/inventory
+Content-Type: application/json
+
+{
+  "projectId": 6,
+  "description": "BSNL Project",
+  "inventory": {
+    "id": 6,
+    "dbType": "MongoDB",
+    "dbName": "bsnl_db",
+    "hostname": "bsnl9634",
+    "port": 27017,
+    "username": "bsnlmong",
+    "password": "qwqw"
+  }
+}
+
+### Find ALL
+GET http://localhost:8080/inventory-management/inventory
+
+### Find By ID
+GET http://localhost:8080/inventory-management/inventory/1
+
+### Find By ID ADMIN
+GET http://localhost:8080/inventory-management/inventory/admin/1
+
+### DELETE By ID
+DELETE http://localhost:8080/inventory-management/inventory/8
+
+### Security
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username": "Rahul",
+  "password": "dummy"
+}
+
+### Token
+POST http://localhost:8080/authenticate

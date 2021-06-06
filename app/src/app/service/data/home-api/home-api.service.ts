@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {API_URL} from "../../../app.constant";
 
 export class Message {
   constructor(public message: string){}
@@ -13,6 +14,8 @@ export class HomeApiService {
   constructor(private httpClient: HttpClient) { }
 
   getHomeMessageApi(name: string) {
-    return this.httpClient.get<Message>(`http://localhost:8080/inventory-management/home/${name}`);
+    return this.httpClient.get<Message>(`${API_URL}/home/${name}`,);
   }
+
+
 }

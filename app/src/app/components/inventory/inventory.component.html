@@ -1,0 +1,59 @@
+<H3>Inventory</H3>
+
+<div class="container">
+
+<!--  <div class="alert alert-warning" *ngIf="connectionForm.dirty && connectionForm.invalid">Please complete the details</div>-->
+  <div class="alert alert-warning" *ngIf="description.dirty && description.invalid">Enter Project Name</div>
+  <div class="alert alert-warning" *ngIf="dbType.dirty && dbType.invalid">Enter DB Type</div>
+  <div class="alert alert-warning" *ngIf="dbName.dirty && dbName.invalid">Enter DB Name</div>
+  <div class="alert alert-warning" *ngIf="hostname.dirty && hostname.invalid">Enter Hostname</div>
+  <div class="alert alert-warning" *ngIf="port.dirty && port.invalid">Enter Port No</div>
+  <div class="alert alert-warning" *ngIf="username.dirty && username.invalid">Enter Username</div>
+
+  <form (ngSubmit)="!connectionForm.invalid && handleSaveOrUpdate(project)" #connectionForm="ngForm">
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Project Description</label>
+      <input type="text" class="form-control" id="description" name="description" #description="ngModel" [(ngModel)]="project.description" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="dbType" class="form-label">DB Type</label>
+      <input type="text" class="form-control" id="dbType" name="dbType" #dbType="ngModel" [(ngModel)]="project.inventory.dbType" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="dbName" class="form-label">DB Name</label>
+      <input type="text" class="form-control" id="dbName" name="dbName" #dbName="ngModel" [(ngModel)]="project.inventory.dbName" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="hostname" class="form-label">Hostname</label>
+      <input type="text" class="form-control" id="hostname" name="hostname" #hostname="ngModel" [(ngModel)]="project.inventory.hostname" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="port" class="form-label">Port</label>
+      <input type="text" class="form-control" id="port" name="port" #port="ngModel" [(ngModel)]="project.inventory.port" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" name="username" #username="ngModel" [(ngModel)]="project.inventory.username" required="required">
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">New Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="newPassword" >
+    </div>
+
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword">
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+
+  </form>
+
+</div>

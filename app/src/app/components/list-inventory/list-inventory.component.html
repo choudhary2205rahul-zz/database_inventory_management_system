@@ -1,8 +1,10 @@
 <H1>DB Inventory</H1>
 
+<div class="alert alert-success" *ngIf="message">{{message}}</div>
+<div class="alert alert-success" *ngIf="checkConnectivity">DB Connection Test for {{projectName}} is Successful!</div>
+
 <div class="container">
   <table class="table">
-    <caption>DB Inventory</caption>
     <thead>
     <tr>
       <th>Project ID</th>
@@ -11,18 +13,40 @@
       <th>DB Name</th>
       <th>Hostname</th>
       <th>Port</th>
+      <th>Username</th>
+      <th *ngIf="adminService.isAdmin()">Update</th>
+      <th *ngIf="adminService.isAdmin()">Delete</th>
+      <th>Test Connectivity</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr *ngFor="let inventory of inventories">
-      <td>{{inventory.projectId}}</td>
-      <td>{{inventory.description}}</td>
-      <td>{{inventory.dbType | uppercase}} </td>
-      <td>{{inventory.dbName}}</td>
-      <td>{{inventory.hostName}}</td>
-      <td>{{inventory.port}}</td>
+    <tr *ngFor="let project of inventories">
+      <td>{{project.projectId}}</td>
+      <td>{{project.description}}</td>
+      <td>{{project.inventory.dbType | uppercase}} </td>
+      <td>{{project.inventory.dbName}}</td>
+      <td>{{project.inventory.hostname}}</td>
+      <td>{{project.inventory.port}}</td>
+      <td>{{project.inventory.username}}</td>
+      <td *ngIf="adminService.isAdmin()">
+        <button class="btn btn-success" (click)="handleUpdate(project.projectId)"><i class="bi bi-pencil-square"></i>
+        </button>
+      </td>
+      <td *ngIf="adminService.isAdmin()">
+        <button class="btn btn-warning" (click)="handleDelete(project.projectId)"><i class="bi bi-trash"></i></button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="handleTestConnectivity(project)"><i class="bi bi-bar-chart"></i>
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>
+
+  <div>
+    <button (click)="addNewConnection()" class="btn btn-success" *ngIf="adminService.isAdmin()">Add</button>
+  </div>
 </div>
+
+
