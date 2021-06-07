@@ -16,15 +16,15 @@ Tech Stack:
 Features:
 --------
 <ul>
-  <li>User Can Register to Inventory Management Application</li>
-  <li>After successfull registration user can login </li>
-  <li>If Login as Admin we can see Manage DB & Manage User Link</li>
-  <li>If Login as User we can only see link to Test the DB Connectivity</li>
+  <li>User Can Login to Inventory Management Application</li>
+  <li>If Login as Admin, then he can Manage DB Inventory & Manage Users</li>
+  <li>If Login as User, then he can Test the DB Connectivity</li>
   <li>Admin can Add New Connection</li>
   <li>Admin can Update Connection</li>
   <li>Admin can Delete Connection</li>
-  <li>Admin/Users can Test DB Connectivity</li>
-  <li>Admin/Users can Logout</li>
+  <li>Admin can Test DB Connectivity</li>
+  <li>User can Test DB Connectivity</li>
+  <li>Logout</li>
 <ul>
 
   
