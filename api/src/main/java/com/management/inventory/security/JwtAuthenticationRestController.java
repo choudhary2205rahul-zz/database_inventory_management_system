@@ -1,11 +1,8 @@
 package com.management.inventory.security;
 
-import java.util.Objects;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.management.inventory.model.JwtTokenRequest;
 import com.management.inventory.model.JwtTokenResponse;
+import com.management.inventory.model.RoleDTO;
 import com.management.inventory.model.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +14,12 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -31,8 +34,6 @@ public class JwtAuthenticationRestController {
   @Autowired
   private JwtTokenUtil jwtTokenUtil;
 
-  /*@Autowired
-  private UserDetailsService jwtInMemoryUserDetailsService;*/
 
   @Autowired
   private JwtUserDetailsService jwtUserDetailsService;
@@ -53,6 +54,11 @@ public class JwtAuthenticationRestController {
 
   @RequestMapping(value = "/register", method = RequestMethod.POST)
   public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+    RoleDTO roleDTO = new RoleDTO();
+    roleDTO.setId(2);
+    Set<RoleDTO> roleDTOList = new HashSet<>();
+    roleDTOList.add(roleDTO);
+    user.setRoles(roleDTOList);
     return ResponseEntity.ok(jwtUserDetailsService.save(user));
   }
 

@@ -53,11 +53,23 @@ Content-Type: application/json
   "password": "dummy"
 }
 
-### Token
+### Register ADMIN
 POST http://localhost:8080/register
 Content-Type: application/json
 
 {
-  "username": "Rahul",
-  "password": "dummy"
+  "username": "TestAdmin",
+  "password": "dummy",
+  "roles": [ {"id":  1}]
 }
+
+### Register USER
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "TestUser",
+  "password": "dummy",
+  "roles": [ {"id":  2}]
+}
+

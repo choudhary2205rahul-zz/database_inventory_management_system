@@ -1,49 +1,32 @@
 package com.management.inventory.security;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.management.inventory.entity.Role;
+import com.management.inventory.entity.User;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
 public class JwtUserDetails implements UserDetails {
 
-  private static final long serialVersionUID = 5155720064139820502L;
+  private User user;
 
-  private final Long id;
-  private final String username;
-  private final String password;
-  private final Collection<? extends GrantedAuthority> authorities;
-
-  public JwtUserDetails(Long id, String username, String password, String role) {
-    this.id = id;
-    this.username = username;
-    this.password = password;
-
-    List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-    authorities.add(new SimpleGrantedAuthority(role));
-
-    this.authorities = authorities;
-  }
-
-  @JsonIgnore
-  public Long getId() {
-    return id;
+  public JwtUserDetails(User user) {
+    this.user = user;
   }
 
   @Override
   public String getUsername() {
-    return username;
+    return user.getUsername();
   }
 
   @JsonIgnore
@@ -67,11 +50,16 @@ public class JwtUserDetails implements UserDetails {
   @JsonIgnore
   @Override
   public String getPassword() {
-    return password;
+    return user.getPassword();
   }
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
+    Set<Role> roles = user.getRoles();
+    List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+    for (Role role: roles) {
+      authorities.add(new SimpleGrantedAuthority(role.getName()));
+    }
     return authorities;
   }
 
