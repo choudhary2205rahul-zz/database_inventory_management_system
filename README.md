@@ -74,9 +74,10 @@ Admin can Test DB Connectivity:
 
 
 
-Admin Users Screen:
--------------------
-![Screenshot from 2021-06-07 14-11-24](https://user-images.githubusercontent.com/84853770/120986496-4ca98080-c79a-11eb-90be-f3ea86cf4c52.png)
+Admin Users List Screen:
+------------------------
+![Screenshot from 2021-06-07 17-35-56](https://user-images.githubusercontent.com/84853770/121013799-eed76180-c7b6-11eb-94a1-b7f16954861a.png)
+
 
 
 Logout Screen:
