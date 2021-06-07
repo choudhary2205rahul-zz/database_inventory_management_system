@@ -104,7 +104,8 @@ Classes Used :
 
 Database Diagram:
 ----------------
-![db](https://user-images.githubusercontent.com/84853770/121001471-f3951900-c7a8-11eb-829a-889b53372369.png)
+![db](https://user-images.githubusercontent.com/84853770/121022328-db7cc400-c7bf-11eb-92fb-abd5c11bd65f.png)
+
   
   
   
