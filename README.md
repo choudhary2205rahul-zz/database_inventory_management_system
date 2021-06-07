@@ -45,7 +45,7 @@ Jenkins CI/CD:
 --------------
 <ul>
   <li>Push code to Github, which will invoke Webhook and Start Jenkins Job to Build the Code</li>
-  <li>Stage 1 : OWASP Scan (Open Web App Security Project) 3rd Party library Scan for Vulnerability</li>
+  <li>Stage 1 : OWASP Scan (Open Web App Security Project) 3rd Party library scan for Vulnerability</li>
   <li>Stage 2 : Junit Test </li>
   <li>Stage 3 : Build Application </li>
   <li>Stage 4 : Sonar Scan </li>
