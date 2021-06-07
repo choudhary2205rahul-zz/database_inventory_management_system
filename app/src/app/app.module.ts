@@ -14,6 +14,7 @@ import {LogoutComponent} from './components/logout/logout.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { InventoryComponent } from './components/inventory/inventory.component';
 import {HttpInterceptorService} from "./service/authentication/http-interceptor.service";
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpInterceptorService} from "./service/authentication/http-interceptor.
     FooterComponent,
     LogoutComponent,
     InventoryComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

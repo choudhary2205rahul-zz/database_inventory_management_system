@@ -1,4 +1,4 @@
-package com.management.inventory.security;
+package com.management.inventory.model;
 
 import java.io.Serializable;
 

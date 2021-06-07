@@ -54,4 +54,10 @@ Content-Type: application/json
 }
 
 ### Token
-POST http://localhost:8080/authenticate
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "Rahul",
+  "password": "dummy"
+}

@@ -1,5 +1,7 @@
-package com.management.inventory.security;
+package com.management.inventory.config;
 
+import com.management.inventory.security.JwtTokenAuthorizationOncePerRequestFilter;
+import com.management.inventory.security.JwtUnAuthorizedResponseAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -84,7 +86,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity webSecurity) throws Exception {
-        webSecurity.ignoring().antMatchers(HttpMethod.POST, authenticationPath)
+        webSecurity.ignoring().antMatchers("/authenticate", "/register")
                 .antMatchers(HttpMethod.OPTIONS, "/**")
                 .and().ignoring()
                 .antMatchers(HttpMethod.GET, "/" // Other Stuff You want to Ignore

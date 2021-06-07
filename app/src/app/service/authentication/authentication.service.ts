@@ -27,6 +27,7 @@ export class AuthenticationService {
           console.log(this.getDecodedAccessToken(data.token));
           let decodedAccessToken = this.getDecodedAccessToken(data.token);
           sessionStorage.setItem(AUTHENTICATED_USER, decodedAccessToken.sub);
+          sessionStorage.setItem(ROLE, 'ROLE_ADMIN');
           sessionStorage.setItem(ROLE, decodedAccessToken.roles[0].authority);
           return data;
         })
@@ -68,5 +69,9 @@ export class AuthenticationService {
     catch(Error){
       return null;
     }
+  }
+
+  register(username: string, password: string) {
+    return this.httpClient.post<any>(`${API_URL}/register`,{username, password});
   }
 }

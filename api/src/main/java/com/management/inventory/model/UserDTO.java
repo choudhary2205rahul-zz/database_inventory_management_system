@@ -1,26 +1,7 @@
-package com.management.inventory.entity;
+package com.management.inventory.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
-
-@Getter
-@Setter
-@Entity
-@Table(name = "users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Column
+public class UserDTO {
     private String username;
-
-    @Column
-    @JsonIgnore
     private String password;
 
     public String getUsername() {
@@ -38,6 +19,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
-
