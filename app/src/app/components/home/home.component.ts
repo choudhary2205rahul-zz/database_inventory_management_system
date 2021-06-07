@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   navigateToUsers() {
-
+    this.router.navigate(['list-users']);
   }
 
   navigateToDB() {

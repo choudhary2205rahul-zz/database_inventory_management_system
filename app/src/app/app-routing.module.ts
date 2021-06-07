@@ -8,6 +8,7 @@ import {LogoutComponent} from "./components/logout/logout.component";
 import {RouteGuardService} from "./service/authentication/route-guard.service";
 import {InventoryComponent} from "./components/inventory/inventory.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {UsersComponent} from "./components/users/users.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'home/:name', component: HomeComponent, canActivate: [RouteGuardService]},
   {path: 'register', component: RegisterComponent},
   {path: 'list-inventory', component: ListInventoryComponent, canActivate: [RouteGuardService]},
+  {path: 'list-users', component: UsersComponent, canActivate: [RouteGuardService]},
   {path: 'inventory/:id', component: InventoryComponent, canActivate: [RouteGuardService]},
   {path: 'logout', component: LogoutComponent},
   {path: '**', component: ErrorComponent},

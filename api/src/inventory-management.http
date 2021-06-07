@@ -49,7 +49,7 @@ POST http://localhost:8080/authenticate
 Content-Type: application/json
 
 {
-  "username": "Rahul",
+  "username": "TestAdmin",
   "password": "dummy"
 }
 
@@ -73,3 +73,6 @@ Content-Type: application/json
   "roles": [ {"id":  2}]
 }
 
+### Users List
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZXN0QWRtaW4iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZXhwIjoxNjIzMDQ5NjkyLCJpYXQiOjE2MjMwNDYwOTJ9.iVi6kwc5MbyuY_9z_W37JbjDlYremJwmzv_f-t2JqurXEYktOpED1V7W8IPVMX6Ti-EnSyXpZTB6Lhh0WWMv3g
