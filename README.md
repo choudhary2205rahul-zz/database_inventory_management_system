@@ -92,9 +92,13 @@ Normal User can Test DB Connection:
 -----------------------------------
 ![Screenshot from 2021-06-07 17-42-43](https://user-images.githubusercontent.com/84853770/121014612-cbf97d00-c7b7-11eb-9295-9cc1d131acde.png)
 
+DB Architecture on Cloud:
+------------------------
+![db-architecture](https://user-images.githubusercontent.com/84853770/121022118-af614300-c7bf-11eb-8316-be639d9c870e.png)
+  
   
 
-CLasses Used :
+Classes Used :
 -------------
 ![classes](https://user-images.githubusercontent.com/84853770/121001228-b466c800-c7a8-11eb-8bb4-b597072080c4.png)
 
