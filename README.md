@@ -45,12 +45,13 @@ Jenkins CI/CD:
 --------------
 <ul>
   <li>Push code to Github, which will invoke Webhook and Start Jenkins Job to Build the Code</li>
-  <li>Stage 1 : OWASP Scan (Open Web App Security Project)</li>
+  <li>Stage 1 : OWASP Scan (Open Web App Security Project) 3rd Party library Scan for Vulnerability</li>
   <li>Stage 2 : Junit Test </li>
   <li>Stage 3 : Build Application </li>
   <li>Stage 4 : Sonar Scan </li>
   <li>Stage 5 : Fortify Scan </li>
   <li>Stage 6 : Docker Build </li>
+  <li>Stage 6 : Twistlok Image Scan for Vulnerability </li>
   <li>Stage 7 : Deploy </li>
 <ul>  
   
