@@ -36,7 +36,19 @@ Application Security: (Spring Securtity with JWT)
 Architecture Diagram:
 ---------------------
 ![inventory-management](https://user-images.githubusercontent.com/84853770/120985560-5b436800-c799-11eb-8f62-47ca30cc0c35.png)
-  
+
+Jenkins CI/CD:
+--------------
+<ul>
+  <li>Push code to Github, which will invoke Webhook and Start Jenkins Job to Build the Code</li>
+  <li>Stage 1 : OWASP Scan (Open Web App Security Project)</li>
+  <li>Stage 2 : Junit Test </li>
+  <li>Stage 3 : Build Application </li>
+  <li>Stage 4 : Sonar Scan </li>
+  <li>Stage 5 : Fortify Scan </li>
+  <li>Stage 6 : Docker Build </li>
+  <li>Stage 7 : Deploy </li>
+<ul>  
   
 Login Screen:
 -------------
