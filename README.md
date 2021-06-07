@@ -38,11 +38,6 @@ Architecture Diagram:
 ![inventory-management](https://user-images.githubusercontent.com/84853770/120985560-5b436800-c799-11eb-8f62-47ca30cc0c35.png)
   
   
-Register Screen:
----------------
-![Screenshot from 2021-06-07 14-08-05](https://user-images.githubusercontent.com/84853770/120986046-d016a200-c799-11eb-8cca-025c540484a4.png)
-
-
 Login Screen:
 -------------
 ![Screenshot from 2021-06-07 14-07-07](https://user-images.githubusercontent.com/84853770/120985928-b5442d80-c799-11eb-8527-b7da692d2480.png)
@@ -79,11 +74,25 @@ Admin Users List Screen:
 ![Screenshot from 2021-06-07 17-35-56](https://user-images.githubusercontent.com/84853770/121013799-eed76180-c7b6-11eb-94a1-b7f16954861a.png)
 
 
-
 Logout Screen:
 --------------
 ![Screenshot from 2021-06-07 14-11-55](https://user-images.githubusercontent.com/84853770/120986581-5fbc5080-c79a-11eb-9216-877426064fb1.png)
 
+  
+Normal User Flow, Home Screen:
+------------------------------
+![Screenshot from 2021-06-07 17-40-01](https://user-images.githubusercontent.com/84853770/121014257-686f4f80-c7b7-11eb-8ef0-2e1a7aab7b84.png)
+  
+
+Normal User can view DB Connection:
+-----------------------------------
+![Screenshot from 2021-06-07 17-41-56](https://user-images.githubusercontent.com/84853770/121014511-b1bf9f00-c7b7-11eb-9bce-fde287d8f0ea.png)
+
+Normal User can Test DB Connection:
+-----------------------------------
+![Screenshot from 2021-06-07 17-42-43](https://user-images.githubusercontent.com/84853770/121014612-cbf97d00-c7b7-11eb-9295-9cc1d131acde.png)
+
+  
 
 CLasses Used :
 -------------
