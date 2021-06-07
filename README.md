@@ -4,7 +4,7 @@ Inventory Management Application
 Tech Stack:
 ----------
 <ul>
-<li>UI: Angular 12 </li>
+<li>UI: Angular 12 (Components, Services, Interceptors) & Bootstrap 4.0 CSS Framework</li>
 <li>Backend: Spring Boot 2.5.0 , Spring Data JPA, MySQL 8.0, Docker</li>
 </ul>
 
@@ -25,9 +25,16 @@ Features:
   <li>Admin/Users can Test DB Connectivity</li>
   <li>Admin/Users can Logout</li>
 <ul>
+
+  
+Application Security:
+---------------------
+  <h3> We are using JWT (Json Web Token) to protect our API</h3>
+  <p>Once User is registered and Login to our Application using Username & Password, we will going to first Validate the User in our Backend, Once user is validated we are creating JWT Token which is sent to UI, UI will going to send this Token for each API Call, Backend will validate the Token and on successful validation only API will going to provide the response.</p>
+  
   
 Architecture Diagram:
---------------------
+---------------------
 ![inventory-management](https://user-images.githubusercontent.com/84853770/120985560-5b436800-c799-11eb-8f62-47ca30cc0c35.png)
   
   
