@@ -84,3 +84,14 @@ Logout Screen:
 ![Screenshot from 2021-06-07 14-11-55](https://user-images.githubusercontent.com/84853770/120986581-5fbc5080-c79a-11eb-9216-877426064fb1.png)
 
 
+CLasses Used :
+-------------
+![classes](https://user-images.githubusercontent.com/84853770/121001228-b466c800-c7a8-11eb-8bb4-b597072080c4.png)
+
+Database Diagram:
+----------------
+![db](https://user-images.githubusercontent.com/84853770/121001471-f3951900-c7a8-11eb-829a-889b53372369.png)
+  
+  
+  
+  
