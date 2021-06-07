@@ -58,17 +58,17 @@ Admin Screen To Manage DB Inventory:
 ![Screenshot from 2021-06-07 14-10-34](https://user-images.githubusercontent.com/84853770/120986418-31d70c00-c79a-11eb-9011-5ea41aed37e5.png)
 
 
-Admin Can Update DB Configuration:
+Admin can Update DB Configuration:
 ----------------------------------
 ![Screenshot from 2021-06-07 14-13-55](https://user-images.githubusercontent.com/84853770/120986818-9befb100-c79a-11eb-84b1-138f00cc7f69.png)
 
 
-Admin Can Add DB Configuration:
+Admin can Add DB Configuration:
 ------------------------------------
 ![Screenshot from 2021-06-07 14-14-29](https://user-images.githubusercontent.com/84853770/120986907-b164db00-c79a-11eb-8692-8e56b4858987.png)
 
 
-Admin/Users Can Test DB Connectivity:
+Admin can Test DB Connectivity:
 ----------------------------------
 ![Screenshot from 2021-06-07 14-15-19](https://user-images.githubusercontent.com/84853770/120987016-cd687c80-c79a-11eb-8b02-e397139ac2e1.png)
 
