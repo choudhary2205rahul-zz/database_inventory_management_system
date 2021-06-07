@@ -14,6 +14,7 @@ Tech Stack:
 
 Architecture Diagram:
 --------------------
+![inventory-management](https://user-images.githubusercontent.com/84853770/120985560-5b436800-c799-11eb-8f62-47ca30cc0c35.png)
 
 
 
