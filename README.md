@@ -12,6 +12,8 @@ Tech Stack:
 <br>
 
 <b>Swagger URL for Rest Api Documentation:</b> http://localhost:8080/swagger-ui/
+![Screenshot from 2021-06-07 19-16-39](https://user-images.githubusercontent.com/84853770/121027855-ebe36d80-c7c4-11eb-8b7f-26eab5c52aa1.png)
+
 
 Features:
 --------
