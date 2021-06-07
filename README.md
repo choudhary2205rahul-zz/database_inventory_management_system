@@ -5,7 +5,8 @@ Tech Stack:
 ----------
 <ul>
 <li>UI: Angular 12 (Components, Services, Interceptors) & Bootstrap 4.0 CSS Framework</li>
-<li>Backend: Spring Boot 2.5.0 , Spring Data JPA, MySQL 8.0, Docker</li>
+<li>Backend: Spring Boot 2.5.0 , Spring Data JPA, MySQL 8.0, Junit, Docker</li>
+<li>Code Scan: Sonar Scan used Free Cloud Sonar Scan</li>  
 </ul>
 
 <br>
